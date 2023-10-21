@@ -1,6 +1,17 @@
 ---
 import Layout from '../layouts/layout.astro';
+import Hero from '../components/landing/Hero.astro';
+import Company from '../components/Company.astro';
+import Explore from '../components/landing/Explore.astro';
+import PorfolioSection from '../components/landing/PorfolioSection.astro';
 ---
 <Layout title="TiFi">
-	<h1 class="text-[#df0000]">Hello world</h1>
+	<div class="overflow-x-hidden">
+		<Hero />
+		<div class="mt-10 mb-5">
+			<Company />
+		</div>
+		<Explore />
+		<PorfolioSection />
+	</div>
 </Layout>

@@ -1,0 +1,19 @@
+---
+interface Props {
+  text: string;
+  color: string;
+  redirect : string;
+}
+const { text, color, redirect } = Astro.props as Props;
+
+const buttonStyle = {
+    backgroundColor: color,
+  };
+---
+<div>
+  <a href={redirect}>
+    <button class="text-white text-center px-4  rounded-lg whitespace-nowrap" style={buttonStyle}>
+      <p>{text}</p></button>
+  </a>
+    </div>
+ 
