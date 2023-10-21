@@ -4,6 +4,11 @@ import Hero from '../components/landing/Hero.astro';
 import Company from '../components/Company.astro';
 import Explore from '../components/landing/Explore.astro';
 import PorfolioSection from '../components/landing/PorfolioSection.astro';
+import Vision from '../components/landing/Vision.astro';
+import Process from '../components/landing/Process.astro';
+import Curation from '../components/landing/Curation.astro';
+import Carousel from '../components/landing/Carousel.astro';
+import FAQ from '../components/landing/LandingPageFAQ.astro';
 ---
 <Layout title="TiFi">
 	<div class="overflow-x-hidden">
@@ -13,5 +18,13 @@ import PorfolioSection from '../components/landing/PorfolioSection.astro';
 		</div>
 		<Explore />
 		<PorfolioSection />
+		<Vision />
+		<Process />
+		<Curation />
+		<Carousel />
+		<FAQ />
+		<div class="mt-10 mb-5">
+			<Company />
+		</div>
 	</div>
 </Layout>
