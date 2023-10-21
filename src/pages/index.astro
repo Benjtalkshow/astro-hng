@@ -1,1 +1,52 @@
 <h1 class="text-[#df0000]">Hello world</h1>
+
+
+<style>
+  .faq details summary::-webkit-details-marker {
+    display: none; /* For Webkit browsers like Chrome and Safari */
+  }
+  .faq details summary::before {
+    content: ""; /* For other browsers */
+  }
+  
+</style>
+
+<h2 class="w-full">FAQ</h2>
+
+<section class="faq grid grid-cols-2 gap-2">
+  {faqData.map(({ question, answer }, index) => (
+    <div class="p-7 bg-[#F2F4F7] rounded">
+      <details>
+        <summary class="font-semibold cursor-pointer relative flex items-center">
+          {question}
+          <span class="plus-icon absolute right-0 bg-gray-300 rounded p-1 px-3 text-black text-center align-items-center">+</span>
+          <span class="minus-icon absolute right-0 bg-[#df0000] rounded p-1 px-3 text-white text-center hidden">-</span>
+        </summary>
+        <p class="mt-2">{answer}</p>
+      </details>
+    </div>
+  ))}
+</section>
+
+
+
+<script>
+  document.querySelectorAll("details").forEach((details) => {
+    const summary = details.querySelector("summary");
+    const plusIcon = summary.querySelector("span.plus-icon");
+    const minusIcon = summary.querySelector("span.minus-icon");
+
+    details.addEventListener("toggle", () => {
+      if (details.open) {
+        plusIcon.classList.add("hidden");
+        minusIcon.classList.remove("hidden");
+      } else {
+        plusIcon.classList.remove("hidden");
+        minusIcon.classList.add("hidden");
+      }
+    });
+  });
+</script>
+
+
+
