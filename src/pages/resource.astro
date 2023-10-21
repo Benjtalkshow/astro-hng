@@ -31,14 +31,14 @@ const overflows = [
   <Navbar/>
     <div class='lg:mx-auto lg:max-w-[80%] pt-[4rem]'>
       <div class="bg-gradient-to-b from-[#fff] to-[#D0D5DD] pb-6">
-        <h1 class='text-center text-[#101828] font-medium text-[2rem]'>Resources and <span class="text-[#FF601F]">Insights</span></h1>
+        <h1 class='text-center text-[#101828] font-medium text-[2rem] md:text-[4rem]'>Resources and <span class="text-[#FF601F]">Insights</span></h1>
         <p class="text-center mt-[1.5rem] font-Noto-Sans">{text}</p>
-        <div class="flex items-center gap-[1rem] py-[.75rem] px-[1rem] my-[1.5rem] mx-auto border bg-white rounded-md w-[90%]">
+        <div class="flex items-center gap-[1rem] py-[.75rem] text-[#667085] px-[1rem] my-[1.5rem] mx-auto border border-[1px] bg-white rounded-md w-[90%] md:w-[40%]">
           <span class="material-symbols-outlined">search</span>
           <input type="text" placeholder='Search' class="border border-none outline outline-none"/>
         </div>
       </div>
-      <div class="mt-[3rem] p-4 overflow-x-auto">
+      <div class="mt-[3rem] p-4 overflow-x-auto md:p-6">
         <ul class="flex gap-[2rem] overflow-x-auto whitespace-nowrap">
           {overflows.map((overflow, index) => (
             <li key={index} class="flex-none">{overflow.name}</li>
@@ -63,7 +63,7 @@ const overflows = [
           </ul>
         </div>
       </div>
-      <div class="p-6">
+      <div class="p-4">
         <Feature />
       </div>
     </div>

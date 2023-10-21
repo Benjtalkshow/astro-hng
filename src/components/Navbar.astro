@@ -3,7 +3,7 @@ import Button from '../components/button.astro'
 const links = [
     {
         name: 'About Us',
-        href: '#',
+        href: '/Individuals',
     }, 
      {
         name: 'Portfolio',
@@ -20,9 +20,9 @@ const links = [
 ]
 ---
 
-<div class='p-4 xl:mx-auto' id="toggleMenu">
+<div class='p-4 md:p-8 xl:mx-auto' id="toggleMenu">
     <div class='flex items-center justify-between'>
-        <div class="flex items-center justify-between lg:w-[80%] lg:mx-auto">
+        <div class="flex items-center justify-between lg:w-[80%] lg:mx-auto lg:rounded-md lg:shadow lg:shadow-[#292D32] lg:border lg:border-[#EAECF0] lg:border-[1px] lg:px-8">
             <a href='/'><img src="/Tifi.svg" alt="" /></a>
             <ul class='lg:flex hidden lg:block font-Noto-Sans text-[.7rem] md:text-[.875rem] lg:text-[1rem] gap-[2rem] font-normal text-[#1D2939]'>
               {links.map((link, index) => (
@@ -74,7 +74,7 @@ const links = [
         console.log(toggle)
         if(toggle) {
             menu.style.display = "block"
-        }else {
+        }else { 
             menu.style.display = "none"
         }
     })
