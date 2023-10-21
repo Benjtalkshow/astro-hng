@@ -1,48 +1,53 @@
 ---
+import video from '../videos/video.mp4'; 
 const videoData = [
-  {
-    question: "What services does tifi.tv offer?",
-    answer: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling."
-  },
-
-  {
-    question: "How can I get started with your services?",
-    answer: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling."
-  },
-
-  {
-    question: "What is the typical process when working with tifi.tv?",
-    answer: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling."
-  },
-
-  {
-    question: "Do you have any case studies or success stories to share?",
-    answer: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling."
-  },
-
+    {
+        video: video,
+        text: "A Day in the life of a Software Developer",
+    },
+    {
+        video: video,
+        text: "A Day in the life of a Software Developer",
+    },
+    {
+        video: video,
+        text: "A Day in the life of a Software Developer",
+    },
+    {
+        video: video,
+        text: "A Day in the life of a Software Developer",
+    },
+    {
+        video: video,
+        text: "A Day in the life of a Software Developer",
+    },
+    {
+        video: video,
+        text: "A Day in the life of a Software Developer",
+    },
 ];
 
 ---
 
 
-<h2 class="w-full text-2xl text-center mb-4">FAQ</h2>
+<h2 class="w-full text-4xl text-center mb-4">Carefully Picked Videos</h2>
 
-<section class="grid grid-cols-2 gap-3">
-   <div class="grid grid-cols-1 gap-3">
-        {videoData.map(({ question, answer }, index) => (
-        <div class="p-4 bg-[#F2F4F7] rounded">
-        <details>
-            <summary class="font-semibold cursor-pointer relative flex items-center">
-            {question}
-            <span class="plus-icon absolute right-0 bg-gray-300 rounded p-1 px-3 text-black text-center align-items-center">+</span>
-            <span class="minus-icon absolute right-0 bg-[#df0000] rounded p-1 px-3 text-white text-center hidden">-</span>
-            </summary>
-            <p class="mt-2">{answer}</p>
-        </details>
-        </div>
-    ))}
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-4 sm:mx-8 md:mx-16 lg:mx-64">
+  {videoData.map((item, index) => (
+    <div key={index} class="relative group">
+    <video width="100%" height="auto" controls class="group-hover:brightness-75 transition-all duration-300">
+        <source src={item.video} type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+    <p class="absolute bottom-3 left-0 text-white p-2 rounded">
+        {item.text}
+    </p>
     </div>
+  ))}
 </section>
+
+
+
 
 
 
