@@ -148,6 +148,9 @@
             font-weight: 500;
             line-height: 24px; /* 150% */
         }
+        a{
+            text-decoration:none !important;
+        }
     </style>
     <div>
         <div class="container-fluid">
@@ -156,7 +159,7 @@
                 <div  class={`col-auto individual_link form_link`}>Individual</div>
             </div>
             <form id = 'business_form' class="row justify-content-center" action="">
-                <div class="col-5">
+                <div class="col-10 col-sm-8 col-lg-5">
                     <div class="row mb-4">
                         <div class="col">
                             <label for="company_name">Company Name</label>
@@ -188,7 +191,7 @@
                 </div>
             </form>
             <form id = 'individual_form'  class="row justify-content-center" action="" style = 'display:none'>
-                <div class="col-5">
+                <div class="col-10 col-sm-8 col-lg-5">
                     <div class="row mb-4">
                         <div class="col">
                             <label for="full_name">Full Name</label>
