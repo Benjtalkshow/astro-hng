@@ -15,7 +15,7 @@ const links = [
     }, 
      {
         name: 'Resources',
-        href: '#',
+        href: '/resource',
     }, 
 ]
 ---
@@ -23,7 +23,7 @@ const links = [
 <div class='p-4 xl:mx-auto' id="toggleMenu">
     <div class='flex items-center justify-between'>
         <div class="flex items-center justify-between lg:w-[80%] lg:mx-auto">
-            <img src="/Tifi.svg" alt="" />
+            <a href='/'><img src="/Tifi.svg" alt="" /></a>
             <ul class='lg:flex hidden lg:block font-Noto-Sans text-[.7rem] md:text-[.875rem] lg:text-[1rem] gap-[2rem] font-normal text-[#1D2939]'>
               {links.map((link, index) => (
                 <li class='mx-2 my-4' key={index}>
@@ -40,7 +40,7 @@ const links = [
         </div>
         <div class="toggleMode px-4 py-8 h-[100vh] hidden" id="menu">
            <div class='flex items-center justify-between'>
-             <img src="/Tifi.svg" alt="" class='mb-6'/>
+             <a href='/'><img src="/Tifi.svg" alt="" class='mb-6'/></a>
              <span class="material-symbols-outlined cursor-pointer" id="cancel">close</span>
            </div>
             <ul class='font-Noto-Sans text-[.7rem] md:text-[.875rem] font-normal text-[#1D2939]'>
