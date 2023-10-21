@@ -1,0 +1,85 @@
+---
+import Button from '../components/button.astro'
+const links = [
+    {
+        name: 'About Us',
+        href: '#',
+    }, 
+     {
+        name: 'Portfolio',
+        href: '#',
+    }, 
+     {
+        name: 'Client',
+        href: '#',
+    }, 
+     {
+        name: 'Resources',
+        href: '#',
+    }, 
+]
+---
+
+<div class='p-4 xl:max-w-[1200px] xl:mx-auto' id="toggleMenu">
+    <div class='flex items-center justify-between'>
+        <div class="flex items-center justify-between lg:w-[80%] lg:mx-auto">
+            <img src="/Tifi.svg" alt="" />
+            <ul class='lg:flex hidden lg:block font-Noto-Sans text-[.7rem] md:text-[.875rem] gap-[2rem] font-normal text-[#1D2939]'>
+              {links.map((link, index) => (
+                <li class='mx-2 my-4'>
+                  <a href={link.href} key={index}>
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <Button className={`hidden lg:block text-white mt-6 font-Inter text-[.7rem] md:text-[.875rem] font-semibold`} children={'LET’S TALK'}/>
+        </div>
+        <div class="grid toggle lg:hidden">
+            <img src='/menu.svg' alt='menu' />
+        </div>
+        <div class="toggleMode px-4 py-8 h-[100vh] hidden" id="menu">
+           <div class='flex items-center justify-between'>
+             <img src="/Tifi.svg" alt="" class='mb-6'/>
+             <span class="material-symbols-outlined" id="cancel">close</span>
+           </div>
+            <ul class='font-Noto-Sans text-[.7rem] md:text-[.875rem] font-normal text-[#1D2939]'>
+              {links.map((link, index) => (
+                <li class='mx-2 my-4'>
+                  <a href={link.href} key={index}>
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <Button className={`text-white mt-6 font-Inter text-[.7rem] md:text-[.875rem] font-semibold`} children={'LET’S TALK'}/>
+        </div>
+    </div>
+</div>
+
+<style type="text/tailwindcss">
+    .toggleMode {
+        @apply absolute top-0 right-0 w-[95%] md:w-[60%] transition-transform transform duration-500 ease-in-out bg-white
+    }
+</style>
+
+<script>
+  const toggleMenu = document.getElementById("toggleMenu")
+  const menu = document.getElementById("menu")
+  const cancel = document.getElementById("cancel")
+
+    toggleMenu.addEventListener("click", () => {
+        console.log("toggleMenu")
+        const toggle = toggleMenu.classList.toggle("toggle")
+        console.log(toggle)
+        if(toggle) {
+            menu.style.display = "block"
+        }else {
+            menu.style.display = "none"
+        }
+    })
+
+    cancel.addEventListener("click", () => {
+        menu.style.display = "none"
+    })
+</script>
