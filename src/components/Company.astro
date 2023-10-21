@@ -112,22 +112,42 @@
             font-weight: 500;
             line-height: 24px; /* 150% */
         }
+        .company{
+            width : 10%;
+        }
+        @media (max-width:991px){
+            .company{
+                width : 29%;
+            }
+            .youtube, .uber, .zoom{
+                width : 15%;
+        }
+        }
+        @media (max-width:575px){
+            .company{
+            width : 40%;
+        }
+        .uber, .zoom{
+               /* height: 80px; */
+        }
+        }
+       
     </style>
     <div>
-        <div class="container-fluid">
+        <div class="container-fluid px-0">
             <!-- Pink Part -->
             <div class="row pink">
                 <div class="col">
                     <div class="row justify-content-center mb-3">
                         <div class="col-auto pink_text">Join 4,000+ companies already growing</div>
                     </div>
-                    <div class="row justify-content-around">
-                        <div class="col-auto"><img src="../../airbnb.svg" alt=""></div>
-                        <div class="col-auto"><img src="../../linear.svg" alt=""></div>
-                        <div class="col-auto"><img src="../../paypal.svg" alt=""></div>
-                        <div class="col-auto"><img src="../../youtube.svg" alt=""></div>
-                        <div class="col-auto"><img src="../../uber.svg" alt=""></div>
-                        <div class="col-auto"><img src="../../zoom.svg" alt=""></div>
+                    <div class="row justify-content-evenly justify-content-lg-evenly">
+                        <img class ="company airbnb mb-3"  src="../../airbnb.svg" alt="">
+                         <img class ="company linear mb-3"  src="../../linear.svg" alt="">
+                        <img class ="company paypal mb-3"  src="../../paypal.svg" alt="">
+                        <img class ="company youtube mb-3"  src="../../youtube.svg" alt="">
+                        <img class ="company uber mb-3"  src="../../uber.svg" alt="">
+                        <img class ="company zoom mb-3" src="../../zoom.svg" alt="">
                     </div>
                 </div>
                 
