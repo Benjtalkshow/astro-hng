@@ -1,0 +1,54 @@
+---
+import video from '../videos/video.mp4'; 
+const videoData = [
+    {
+        video: video,
+        text: "A Day in the life of a Software Developer",
+    },
+    {
+        video: video,
+        text: "A Day in the life of a Software Developer",
+    },
+    {
+        video: video,
+        text: "A Day in the life of a Software Developer",
+    },
+    {
+        video: video,
+        text: "A Day in the life of a Software Developer",
+    },
+    {
+        video: video,
+        text: "A Day in the life of a Software Developer",
+    },
+    {
+        video: video,
+        text: "A Day in the life of a Software Developer",
+    },
+];
+
+---
+
+
+<h2 class="w-full text: 3xl md:text-4xl text-center mb-4 px-10">Carefully Picked Videos</h2>
+
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-6 lg:max-w-[80%] mx-auto">
+  {videoData.map((item, index) => (
+    <div key={index} class="relative group">
+    <video width="100%" height="auto" controls class="brightness-0 group-hover:brightness-100  transition-all duration-300">
+        <source src={item.video} type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+    <p class="absolute bottom-3 left-0 text-white p-2 rounded">
+        {item.text}
+    </p>
+    </div>
+  ))}
+</section>
+
+
+
+
+
+
+
