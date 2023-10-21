@@ -1,8 +1,13 @@
 ---
 import Layout from '../layouts/layout.astro';
 import Hero from '../components/landing/Hero.astro';
+import Company from '../components/Company.astro';
 ---
 <Layout title="TiFi">
-	<Hero />
-	<h1 class="text-[#df0000]">Hello world</h1>
+	<div class="overflow-x-hidden">
+		<Hero />
+		<div class="mt-10">
+			<Company />
+		</div>
+	</div>
 </Layout>
