@@ -20,20 +20,20 @@ const links = [
 ]
 ---
 
-<div class='p-4 xl:max-w-[1200px] xl:mx-auto' id="toggleMenu">
+<div class='p-4 xl:mx-auto' id="toggleMenu">
     <div class='flex items-center justify-between'>
         <div class="flex items-center justify-between lg:w-[80%] lg:mx-auto">
             <img src="/Tifi.svg" alt="" />
-            <ul class='lg:flex hidden lg:block font-Noto-Sans text-[.7rem] md:text-[.875rem] gap-[2rem] font-normal text-[#1D2939]'>
+            <ul class='lg:flex hidden lg:block font-Noto-Sans text-[.7rem] md:text-[.875rem] lg:text-[1rem] gap-[2rem] font-normal text-[#1D2939]'>
               {links.map((link, index) => (
-                <li class='mx-2 my-4'>
-                  <a href={link.href} key={index}>
+                <li class='mx-2 my-4' key={index}>
+                  <a href={link.href}>
                     {link.name}
                   </a>
                 </li>
               ))}
             </ul>
-            <Button className={`hidden lg:block text-white mt-6 font-Inter text-[.7rem] md:text-[.875rem] font-semibold`} children={'LET’S TALK'}/>
+            <Button className={`hidden lg:block text-white mt-6 font-Inter text-[.7rem] md:text-[.875rem] lg:text-[1rem] font-semibold`} children={'LET’S TALK'}/>
         </div>
         <div class="grid toggle lg:hidden">
             <img src='/menu.svg' alt='menu' />
@@ -41,12 +41,12 @@ const links = [
         <div class="toggleMode px-4 py-8 h-[100vh] hidden" id="menu">
            <div class='flex items-center justify-between'>
              <img src="/Tifi.svg" alt="" class='mb-6'/>
-             <span class="material-symbols-outlined" id="cancel">close</span>
+             <span class="material-symbols-outlined cursor-pointer" id="cancel">close</span>
            </div>
             <ul class='font-Noto-Sans text-[.7rem] md:text-[.875rem] font-normal text-[#1D2939]'>
               {links.map((link, index) => (
-                <li class='mx-2 my-4'>
-                  <a href={link.href} key={index}>
+                <li class='mx-2 my-4' key={index}>
+                  <a href={link.href}>
                     {link.name}
                   </a>
                 </li>
