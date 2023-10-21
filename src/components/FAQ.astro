@@ -56,9 +56,9 @@ const faqData2 = [
   }
 </style>
 
+<div class='py-20'>
 <h2 class="w-full text-2xl text-center mb-4">FAQ</h2>
-
-<section class="faq grid grid-cols-1 md:grid-cols-2 gap-4 mx-4 sm:mx-8 md:mx-16 lg:mx-64">
+<section class="faq grid grid-cols-1 md:grid-cols-2 gap-4 p-6 lg:w-[80%] lg:mx-auto">
     <div class="grid grid-cols-1 gap-3">
         {faqData1.map(({ question, answer }, index) => (
             <div class="p-4 bg-[#F2F4F7] rounded">
@@ -89,6 +89,7 @@ const faqData2 = [
     </div>
     <>
 </section>
+</div>
 
 <script>
   document.querySelectorAll("details").forEach((details) => {
