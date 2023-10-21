@@ -27,13 +27,13 @@ const links = [
             <ul class='lg:flex hidden lg:block font-Noto-Sans text-[.7rem] md:text-[.875rem] lg:text-[1rem] gap-[2rem] font-normal text-[#1D2939]'>
               {links.map((link, index) => (
                 <li class='mx-2 my-4' key={index}>
-                  <a href={link.href}>
+                  <a href={link.href} style="text-decoration:none; color:#000">
                     {link.name}
                   </a>
                 </li>
               ))}
             </ul>
-            <Button className={`hidden lg:block text-white mt-6 font-Inter text-[.7rem] md:text-[.875rem] lg:text-[1rem] font-semibold`} children={'LET’S TALK'}/>
+            <Button className={`hidden lg:block text-white mt-0 font-Inter text-[.7rem] md:text-[.875rem] lg:text-[1rem] font-semibold`} children={'LET’S TALK'}/>
         </div>
         <div class="grid toggle lg:hidden">
             <img src='/menu.svg' alt='menu' />
