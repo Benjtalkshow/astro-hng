@@ -55,7 +55,7 @@ import Form from '../components/Form.astro'
                     <h3 class="text-[#101828] text-xl font-bold leading-[160%] font-redhat">Custom Solutions for...</h3>
                 </div>
                 <div class="flex flex-col lg:flex-row gap-8">
-                    <div class="flex rounded-2xl p-4 h-[25rem] w-full sm:w-full lg:w-[31rem] flex-col items-start gap-[0.625rem] flex-[1 0 0] bg-[#F2F4F7]">
+                    <div class="flex rounded-2xl p-4 w-full sm:w-full lg:w-[31rem] flex-col items-start gap-[0.625rem] flex-[1 0 0] bg-[#F2F4F7]">
                         <h4 class="text-[#101828] text-[2.25rem] font-bold leading-[160%]">Personal Vlogs & Lifestyle</h4>
                         <ul class="flex flex-col items-start pb-8 gap-2 self-stretch">
                             <li class=" flex gap-2"><img src="/tick-circle.png"/> Vlog Editing</li>
@@ -67,7 +67,7 @@ import Form from '../components/Form.astro'
                         </ul>
                         <p>We&apos;re here to help you. Reach out to us as soon as possible!</p>
                     </div>
-                    <div class="flex rounded-2xl p-4 h-[25rem] w-full md:w-full lg:w-[31rem] flex-col items-start gap-[0.625rem] flex-[1 0 0] bg-[#fcece7]">
+                    <div class="flex rounded-2xl p-4 w-full md:w-full lg:w-[31rem] flex-col items-start gap-[0.625rem] flex-[1 0 0] bg-[#fcece7]">
                         <h4 class="text-[#101828] text-[2.25rem] font-bold leading-[160%] font-noto">Content & Personal Branding</h4>
                         <ul class="flex flex-col items-start pb-8 gap-2 self-stretch">
                             <li class=" flex gap-2"><img src="/tick-circle.png"/> Online Courses and Tutorials</li>
@@ -130,7 +130,15 @@ import Form from '../components/Form.astro'
                     </div>
             </section>
         </main>
-        <Form/>
+        <div class=" flex flex-col gap-[48px]">
+            <div class=" flex flex-col justify-center items-center text-center gap-[48px] mx-2 sm:mx-10 ">
+                <p class=" lg:flex w-[1140px] justify-center items-center text-center hidden m-0 p-0 text-[72px] font-bold"> LET US KNOW HOW WE CAN HELP YOUR BUSINESS.</p>
+                <p class=" md:flex justify-center items-center text-center hidden lg:hidden text-[48px] font-bold m-0 p-0"> LET US KNOW HOW WE CAN HELP YOU.</p>
+                <p class=" block justify-center items-center text-center sm:hidden m-0 p-0 text-[32px] font-bold"> LET&lsquo;S <span class=" inline-flex text-[#ff601f]"> CREATE</span> SOMETHING SPECIAL TOGETHER.</p>
+                <p class=" lg:hidden justify-center items-center text-center flex m-0 p-0">In just 48 hours, our experts will meticulously assess your video content and reveal untapped opportunities for enhancing your brand and visual storytelling.</p>
+            </div>
+            <Form/>
+        </div>
         <FAQ/>
         <Company/>
         <Footer/>
