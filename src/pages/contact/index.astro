@@ -1,45 +1,17 @@
 ---
-// let business_active = true
-// let individual_active = false
+import Navbar from  '../../components/Navbar.astro';
+import Footer from  '../../components/Footer.astro';
+import Form from  '../../components/Form.astro';
+import Company from  '../../components/Company.astro';
+
 ---
-
-<script>
-    let business_form = document.getElementById('business_form');
-    let individual_form = document.getElementById('individual_form');
-
-    const business_link = document.querySelector(".business_link");
-    business_link.addEventListener("click", () => {
-        console.log("Hello, on client");
-        business_form.style.display = 'flex'
-        business_link.classList.add('form_link_active');
-        business_link.classList.remove('form_link');
-
-        individual_form.style.display = 'none';
-        individual_link.classList.add('form_link');
-        individual_link.classList.remove('form_link_active');
-
-    });
-
-    const individual_link = document.querySelector(".individual_link");
-    individual_link.addEventListener("click", () => {
-        console.log("Hello, on client");
-        business_form.style.display = 'none'
-        business_link.classList.add('form_link');
-        business_link.classList.remove('form_link_active');
-
-        individual_form.style.display = 'flex'
-        individual_link.classList.add('form_link_active');
-        individual_link.classList.remove('form_link');
-    });
-   
-</script>
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <title>Bootstrap demo</title> -->
+    <title>Contact</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
   <body>
@@ -150,13 +122,24 @@
         }
     </style>
     <div>
+        <Navbar />
         <div class="container-fluid">
-            <div class="row justify-content-center mb-5" style="border-bottom: 1px solid var(--gray-500, #D0D5DD);">
+            <div class="row justify-content-center mb-3">
+                <div class="col-auto col-sm-auto col-lg-auto">
+                    <p class="get_in_touch" style="white-space:nowra">Get in touch</p>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-5">
+                <div class="col-8">
+                    <p class="get_in_touch_text">In just 48 hours, our experts will meticulously assess your video content and reveal untapped opportunities for enhancing your <span class="get_in_touch_brand">brand</span> and visual storytelling.</p>
+                </div>
+            </div>
+            <!-- <div class="row justify-content-center mb-5" style="border-bottom: 1px solid var(--gray-500, #D0D5DD);">
                 <div  class={`col-auto business_link form_link_active`}>Business</div>
                 <div  class={`col-auto individual_link form_link`}>Individual</div>
             </div>
             <form id = 'business_form' class="row justify-content-center" action="">
-                <div class="col-10 col-sm-8 col-lg-5">
+                <div class="col-5">
                     <div class="row mb-4">
                         <div class="col">
                             <label for="company_name">Company Name</label>
@@ -188,7 +171,7 @@
                 </div>
             </form>
             <form id = 'individual_form'  class="row justify-content-center" action="" style = 'display:none'>
-                <div class="col-10 col-sm-8 col-lg-5">
+                <div class="col-5">
                     <div class="row mb-4">
                         <div class="col">
                             <label for="full_name">Full Name</label>
@@ -218,7 +201,27 @@
 
                     </div>
                 </div>
-            </form>
+            </form> -->
+            <Form />
+            <!-- Pink Part -->
+            <Company />
+            <!-- <div class="row pink">
+                <div class="col">
+                    <div class="row justify-content-center mb-3">
+                        <div class="col-auto pink_text">Join 4,000+ companies already growing</div>
+                    </div>
+                    <div class="row justify-content-around">
+                        <div class="col-auto"><img src="../../airbnb.svg" alt=""></div>
+                        <div class="col-auto"><img src="../../linear.svg" alt=""></div>
+                        <div class="col-auto"><img src="../../paypal.svg" alt=""></div>
+                        <div class="col-auto"><img src="../../youtube.svg" alt=""></div>
+                        <div class="col-auto"><img src="../../uber.svg" alt=""></div>
+                        <div class="col-auto"><img src="../../zoom.svg" alt=""></div>
+                    </div>
+                </div>
+                
+            </div> -->
+            <Footer />
         </div>
     </div>
    
