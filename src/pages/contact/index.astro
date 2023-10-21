@@ -1,4 +1,6 @@
 ---
+import Navbar from  '../../components/Navbar.astro';
+import Footer from  '../../components/Footer.astro';
 import Form from  '../../components/Form.astro';
 import Company from  '../../components/Company.astro';
 
@@ -120,10 +122,11 @@ import Company from  '../../components/Company.astro';
         }
     </style>
     <div>
+        <Navbar />
         <div class="container-fluid">
             <div class="row justify-content-center mb-3">
-                <div class="col-auto">
-                    <p class="get_in_touch">Get in touch</p>
+                <div class="col-auto col-sm-auto col-lg-auto">
+                    <p class="get_in_touch" style="white-space:nowra">Get in touch</p>
                 </div>
             </div>
             <div class="row justify-content-center mb-5">
@@ -218,6 +221,7 @@ import Company from  '../../components/Company.astro';
                 </div>
                 
             </div> -->
+            <Footer />
         </div>
     </div>
    
