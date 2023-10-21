@@ -1,0 +1,16 @@
+---
+interface Props {
+  text: string;
+  color: string;
+}
+const { text, color } = Astro.props as Props;
+
+const buttonStyle = {
+    backgroundColor: color,
+  };
+---
+<div>
+  <button class="text-white text-center px-5 py-2 rounded-lg whitespace-nowrap flex items-center" style={buttonStyle}>
+      <p class='pr-2'>{text}</p></button>
+    </div>
+ 
