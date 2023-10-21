@@ -1,0 +1,92 @@
+---
+import Header from '../components/Header.astro'
+import layout from '../layouts/layout.astro'
+import FAQ from '../components/FAQ.astro'
+import Videos from '../components/Videos.astro'
+import Navbar from '../components/Navbar.astro'
+import Footer from '../components/Footer.astro'
+import Form from '../components/Form.astro'
+---
+
+
+<layout title='individual'>
+    <Navbar/>
+    <Header heading="For Individuals" text="In the realm of video creativity, every frame is a canvas, and we're here to help you paint your stories. Welcome to tifi.tv, where we cater to the unique needs of content creators, travelers, vloggers, and individuals with a passion for visual storytelling."/>
+
+    <main class="flex flex-col justify-center items-center">
+            <section class="flex bg-[#f2f4f7] py-[6rem] px-4 sm:px-[2rem] lg:px-[10rem] flex-col w-full">
+                <div class=" flex flex-col items-center justify-center gap-[0.625rem]">
+                    <div class="flex flex-col items-center pb-[3.5rem] gap-[1.5rem]">
+                        <h2 class="text-[#101828] text-center text-5xl font-semibold">Our Palette of <span class=" text-[#ff601f]">Corporate</span> Video Services</h2>
+                        <p class=" text-[#344054] text-center text-base">Unlocking the Power of Visual Storytelling for Your Business</p>
+                    </div>
+                    <div class="flex flex-col lg:flex-row w-full justify-center items-center gap-[2rem]">
+                        <div class="flex bg-white flex-col rounded-lg w-[100%] lg:w-[19rem]">
+                            <img src="/Frame 401.png"/>
+                            <div class="flex pt-[2rem] px-[1rem] pb-[1.25rem] flex-col justify-center items-center gap-2 self-stretch font-noto">
+                                <h3 class="text-[#101828] text-center text-[1.125rem] font-[700] leading-[160%]">Product <span class=" text-[#ff601f]">Demonstrations</span></h3>
+                                <p class="text-[#344054] text-center text-base leading-[160%]">Present your products in their best light with dynamic and engaging demonstrations that showcase their features and benefits.</p>
+                            </div>
+                        </div>
+                        <div class="flex bg-white flex-col rounded-lg w-[100%] lg:w-[19rem]">
+                            <img src="/Frame 402.png"/>
+                            <div class="flex pt-[2rem] px-[1rem] pb-[1.25rem] flex-col justify-center items-center gap-2 self-stretch font-noto">
+                                <h3 class="text-[#101828] text-center text-[1.125rem] font-[700] leading-[160%]">Promotional <span class=" text-[#ff601f]">Videos</span></h3>
+                                <p class="text-[#344054] text-center text-base leading-[160%]">Craft compelling promotional videos that captivate your audience, drive conversions, and enhance brand visibility.</p>
+                            </div>
+                        </div>
+                        <div class="flex bg-white flex-col rounded-lg w-[100%] lg:w-[19rem]">
+                            <img src="/Frame 403.png"/>
+                            <div class="flex pt-[2rem] px-[1rem] pb-[1.25rem] flex-col justify-center items-center gap-2 self-stretch font-noto">
+                                <h3 class="text-[#101828] text-center text-[1.125rem] font-[700] leading-[160%]"><span class=" text-[#ff601f]">Internal</span> Communications</h3>
+                                <p class="text-[#344054] text-center text-base leading-[160%]">Foster strong internal connections through effective video communication, making sure your message resonates with your team.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class=" text-[#344054] text-center w-[80%] lg:w-[43.875rem] py-[3.5rem] px-0 leading-[160%]">With tifi.tv, your creative vision transforms into captivating visual stories.</p>
+                    <button class="flex shadow-[0px 14px 16px 0px rgba(29, 41, 57, 0.05)] rounded-lg bg-[#ff601f] py-[0.75rem] p-[1.25rem] justify-center items-center gap-3 text-white font-extrabold leading-6 hover:opacity-[0.8]">Let's Talk <img src="/DiagArrow.png" /></button>
+                </div>
+            </section>
+            <section class="flex flex-col bg-[#fcfcfd] w-full py-24 px-4 lg:px-40 justify-center items-center gap-14">
+                <div class="flex flex-col items-center gap-6 self-stretch">
+                    <p class="text-[#ff601f] text-center text-xl font-bold leading-[160%] hidden md:block font-noto">WHAT WE CAN DO FOR YOU</p>
+                    <p class="text-[#ff601f] text-center text-xl font-bold leading-[160%] block md:hidden font-noto">WHO WE HELP</p>
+                    <h3 class="text-[#101828] text-xl font-bold leading-[160%] font-redhat">Custom Solutions for...</h3>
+                </div>
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="flex rounded-2xl p-4 h-[25rem] w-full sm:w-full lg:w-[31rem] flex-col items-start gap-[0.625rem] flex-[1 0 0] bg-[#F2F4F7]">
+                        <h4 class="text-[#101828] text-[2.25rem] font-bold leading-[160%]">Branding & Marketing</h4>
+                        <ul class="flex flex-col items-start pb-8 gap-2 self-stretch">
+                            <li class=" flex gap-2"><img src="/tick-circle.png"/> Brand Identity Videos</li>
+                            <li class=" flex gap-2"><img src="/tick-circle.png"/> Product and Service Promotion</li>
+                            <li class=" flex gap-2"><img src="/tick-circle.png"/> Event Videos</li>
+                            <li class=" flex gap-2"><img src="/tick-circle.png"/> Recritment and HR Videos</li>
+                            <li class=" flex gap-2"><img src="/tick-circle.png"/> Training and Educational Videos</li>
+                            <li class=" flex gap-2"><img src="/tick-circle.png"/> And many more</li>
+                        </ul>
+                        <p>We&apos;re here to help you. Reach out to us as soon as possible!</p>
+                    </div>
+                    <div class="flex rounded-2xl p-4 h-[25rem] w-full md:w-full lg:w-[31rem] flex-col items-start gap-[0.625rem] flex-[1 0 0] bg-[#fcece7]">
+                        <h4 class="text-[#101828] text-[2.25rem] font-bold leading-[160%] font-noto">Digital Marketing</h4>
+                        <ul class="flex flex-col items-start pb-8 gap-2 self-stretch">
+                            <li class=" flex gap-2"><img src="/tick-circle.png"/> Social Media Videos</li>
+                            <li class=" flex gap-2"><img src="/tick-circle.png"/> Ad Campaign Videos</li>
+                            <li class=" flex gap-2"><img src="/tick-circle.png"/> Content Marketing Videos</li>
+                            <li class=" flex gap-2"><img src="/tick-circle.png"/> Email Marketing Videos</li>
+                            <li class=" flex gap-2"><img src="/tick-circle.png"/> YouTube and Online Video Content</li>
+                            <li class=" flex gap-2"><img src="/tick-circle.png"/> And many more</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="case-studies-section">
+                <div class="case-studies-title-container">
+                    <h3 class="case-studies-title font-redhat">Case <span>Studies</span></h3>
+                    <p class="case-studies-desc font-noto">Stories of transformation, engagement, and success.</p>
+                </div>
+            </section>
+        </main>
+        <FAQ/>
+        <Form/>
+        <Footer/>
+</layout>
