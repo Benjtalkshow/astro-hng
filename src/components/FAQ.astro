@@ -56,9 +56,9 @@ const faqData2 = [
   }
 </style>
 
+<div class='py-20'>
 <h2 class="w-full text-2xl text-center mb-4">FAQ</h2>
-
-<section class="faq grid grid-cols-1 md:grid-cols-2 gap-4 mx-4 sm:mx-8 md:mx-16 lg:mx-64">
+<section class="faq grid grid-cols-1 md:grid-cols-2 gap-4 p-6 lg:w-[80%] lg:mx-auto">
     <div class="grid grid-cols-1 gap-3">
         {faqData1.map(({ question, answer }, index) => (
             <div class="p-4 bg-[#F2F4F7] rounded">
@@ -66,7 +66,7 @@ const faqData2 = [
                 <summary class="font-semibold cursor-pointer relative flex items-center">
                 {question}
                 <span class="plus-icon absolute right-0 bg-gray-300 rounded p-1 px-3 text-black text-center align-items-center">+</span>
-                <span class="minus-icon absolute right-0 bg-[#df0000] rounded p-1 px-3 text-white text-center hidden">-</span>
+                <span class="minus-icon absolute right-0 bg-[#ff601f] rounded p-1 px-3 text-white text-center hidden">-</span>
                 </summary>
                 <p class="mt-2">{answer}</p>
             </details>
@@ -80,7 +80,7 @@ const faqData2 = [
             <summary class="font-semibold cursor-pointer relative flex items-center">
             {question}
             <span class="plus-icon absolute right-0 bg-gray-300 rounded p-1 px-3 text-black text-center align-items-center">+</span>
-            <span class="minus-icon absolute right-0 bg-[#df0000] rounded p-1 px-3 text-white text-center hidden">-</span>
+            <span class="minus-icon absolute right-0 bg-[#FF601F] rounded p-1 px-3 text-white text-center hidden">-</span>
             </summary>
             <p class="mt-2">{answer}</p>
         </details>
@@ -89,6 +89,7 @@ const faqData2 = [
     </div>
     <>
 </section>
+</div>
 
 <script>
   document.querySelectorAll("details").forEach((details) => {
@@ -105,7 +106,7 @@ const faqData2 = [
         minusIcon.classList.add("hidden");
       }
     });
-  });
+  });
 </script>
 
 
