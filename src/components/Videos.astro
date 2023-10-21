@@ -32,10 +32,10 @@ const videoData = [
 
 <h2 class="w-full text: 3xl md:text-4xl text-center mb-4 px-10">Carefully Picked Videos</h2>
 
-<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-4 sm:mx-8 md:mx-16 lg:mx-64">
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-6 lg:max-w-[80%] mx-auto">
   {videoData.map((item, index) => (
     <div key={index} class="relative group">
-    <video width="100%" height="auto" controls class="group-hover:brightness-75 transition-all duration-300">
+    <video width="100%" height="auto" controls class="brightness-0 group-hover:brightness-100  transition-all duration-300">
         <source src={item.video} type="video/mp4" />
         Your browser does not support the video tag.
     </video>
