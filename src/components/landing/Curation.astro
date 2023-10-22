@@ -11,22 +11,35 @@ import LandingButton from "./LandingButton.astro";
         <h5 class="font-bold md:text-5xl xl:text-7rem">The Tech Guy</h5>
         <p class="text-xl">A Day in the life of a Software Developer</p>
         <div class="flex justify-center items-center w-full">
-            <LandingButton redirect="/business" text="Explore all services" color="gray" />
+            <LandingButton 
+            redirect="/business" 
+            text="View Project" 
+            icon="/landing/lets-talk.svg" 
+            classNames="text-white bg-transparent border-[1px] border-gray-500"
+            glassmorphism={true}/>
           </div>    </div>
 
     <div class="mtn-div py-[15rem] text-white grid gap-2 xl:py-[18.5rem]">
         <h5 class="font-bold md:text-5xl xl:text-7rem">We Are the Pulse</h5>
         <p class="text-xl">An Ad made for MTN</p>
         <div class="flex justify-center items-center w-full">
-            <LandingButton redirect="/business" text="Explore all services" color="gray" />
-          </div>    </div>
+            <LandingButton 
+            redirect="/business" 
+            text="View Project" 
+            icon="/landing/lets-talk.svg" 
+            classNames="text-white bg-transparent border-[1px] border-gray-500"
+            glassmorphism={true}/>          </div>    </div>
 
     <div class="all-projects py-[15rem] text-white grid gap-2 xl:py-[18.5rem]">
         <h5 class="font-bold md:text-5xl xl:text-7rem relative z-1">All Projects</h5>
         <p class="text-xl relative z-1">We don’t like to brag, so let our work do the talking</p>
-        <div class="flex justify-center items-center w-full">
-            <LandingButton redirect="/business" text="Explore all services" color="gray" />
-          </div>    </div>
+        <div class="flex justify-center items-center w-full z-20">
+            <LandingButton 
+            redirect="/business" 
+            text="View All Projects" 
+            icon="/landing/lets-talk.svg" 
+            classNames="text-white bg-transparent border-[1px] border-gray-500"
+            glassmorphism={true}/>          </div>    </div>
 </section>
 
 <style>
