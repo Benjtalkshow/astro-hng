@@ -13,16 +13,20 @@ import Newsletter from "../components/business/newsletter.astro"
 ---
 
 <Layout>
-    <Hero/>
-    <Service/>
-    <Offer/>
-    <Analytic/>
-    <Case/>
-    <Conclusion/>
-    <Newsletter/>
+    <div class="overflow-x-hidden">
+        <Hero/>
+        <Service/>
+        <Offer/>
+        <Analytic/>
+        <Case/>
+        <Conclusion/>
+        <Newsletter/>
     <div class="mt-10">
         <FAQ/>
     </div>
-    <div class="my-10"><Company/></div>
+    <div class="my-10">
+        <Company/>
+    </div>
+    </div>
 </Layout>
 
