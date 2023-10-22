@@ -1,6 +1,6 @@
 ---
 import Header from '../components/Header.astro'
-import layout from '../layouts/layout.astro'
+import Layout from '../layouts/layout.astro'
 import FAQ from '../components/FAQ.astro'
 import Videos from '../components/Videos.astro'
 import Navbar from '../components/Navbar.astro'
@@ -27,8 +27,7 @@ const overflows = [
 ]
 ---
 
-<layout title='Resources'>
-  <Navbar/>
+<Layout title='Resources'>
     <div class='lg:mx-auto lg:max-w-[80%] pt-[4rem]'>
       <div class="bg-gradient-to-b from-[#fff] to-[#D0D5DD] pb-6">
         <h1 class='text-center text-[#101828] font-medium text-[2rem] md:text-[4rem]'>Resources and <span class="text-[#FF601F]">Insights</span></h1>
@@ -78,8 +77,7 @@ const overflows = [
   </div>
   <FAQ/>
   <Company/>
-  <Footer/>
-</layout>
+</Layout>
 
 <script>
  const dropdownDiv = document.getElementById("dropdown-div")
