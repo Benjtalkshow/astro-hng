@@ -60,11 +60,11 @@ const links = [
       <ul class='font-Noto-Sans text-[.7rem] md:text-[.875rem] font-normal text-[#1D2939]'>
         {links.map((link, index) => (
           <li class='mx-2 my-4' key={index}>
-            <a href={link.href} class="text-[#1D2939] no-underline hover:text-[#FF601F]">
+            <a href={link.href} class="text-[#1D2939] no-underline hover:text-[#FF601F]" id="clientLink">
               {link.name}
             </a>
             {link.name === 'Client' && (
-              <div class="hidden absolute top-6 left-0 bg-white border border-[#EAECF0] pt-4 pb-8 px-4 z-10 h-[7rem] w-[10rem]">
+              <div class="hidden absolutes top-6 left-0 bg-white pt-4 pb-8 px-4 z-10 h-[7rem] " id="clientDropdown">
                 <a href="/individuals" class="text-[#1D2939] lg:text-[1.2rem] no-underline my-2 hover:text-[#FF601F] block">Individuals</a>
                 <a href="/business" class="text-[#1D2939] lg:text-[1.2rem] no-underline my-2 hover:text-[#FF601F]">Business</a>
               </div>
@@ -92,9 +92,19 @@ const links = [
       @apply block;
     }
 
-    .absolute {
+    .absolute, absolutes {
       @apply hidden;
     }
+
+    #clientDropdown {
+      @apply hidden
+    }
+
+    #clientLink:hover + #clientDropdown,
+    #clientDropdown:hover {
+      @apply block
+    }
+
 
 </style>
 
@@ -102,6 +112,10 @@ const links = [
   const menu = document.getElementById("menu")
   const cancel = document.getElementById("cancel")
   const toggle = document.getElementById("toggle")
+  const clientLink = document.getElementById("clientLink");
+  const clientDropdown = document.getElementById("clientDropdown");
+
+
 
   toggle.addEventListener("click", () => {
     console.log("toggle clicked")
@@ -118,4 +132,12 @@ const links = [
       console.log("cancel clicked")
         menu.style.display = "none"
     })
+
+    clientLink.addEventListener("click", () => {
+      if(clientDropdown.style.display = "block") {
+        clientDropdown.style.display = "none";
+      } else {
+        clientDropdown.style.display = "block"
+      }
+    });
 </script>
